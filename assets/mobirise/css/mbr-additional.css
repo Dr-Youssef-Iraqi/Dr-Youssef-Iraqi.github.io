@@ -1060,6 +1060,9 @@ a {
   top: 0;
 }
 .cid-tt75JgsP6Y .row {
+  flex-direction: row-reverse;
+}
+.cid-tt75JgsP6Y .row {
   align-items: center;
 }
 @media (max-width: 991px) {
