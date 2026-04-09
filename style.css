@@ -271,30 +271,32 @@ main {
 }
 
 /* ── STUDENTS ── */
-.student-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
+.student-list {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
 }
 
-.student-item {
-  padding: 0.8rem 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border-light);
-  border-radius: 3px;
-}
-
-.student-name {
+.student-list li {
   font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.student-list .student-name {
   font-weight: 500;
   color: var(--accent);
-  margin-bottom: 0.2rem;
 }
 
-.student-topic {
-  font-size: 0.78rem;
+.student-list--former li {
   color: var(--text-muted);
-  line-height: 1.4;
+}
+
+.student-list--former .student-name {
+  color: var(--text-muted);
+  font-weight: 400;
 }
 
 /* ── CONTACT INFO ── */
@@ -619,10 +621,6 @@ footer {
 
   main {
     padding: 2rem 1.5rem;
-  }
-
-  .student-grid {
-    grid-template-columns: 1fr;
   }
 
   .news-item {
