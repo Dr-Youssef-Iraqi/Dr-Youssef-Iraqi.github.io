@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research — Youssef Iraqi</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,6 +18,11 @@
     </div>
 
     <img src="photo.jpg" alt="Youssef Iraqi" class="sidebar-photo" />
+
+    <button class="nav-toggle" onclick="
+      document.querySelector('nav').classList.toggle('open');
+      document.querySelector('.sidebar-links').classList.toggle('open');
+    ">☰ Menu</button>
 
     <nav>
       <a href="index.html">Home</a>
@@ -75,6 +81,41 @@
       </div>
     </section>
 
+    <!-- SELECTED PUBLICATIONS -->
+    <section class="section">
+      <h2 class="section-title">Selected Recent Publications</h2>
+      <div class="pub-list">
+        <div class="pub-item">
+          Yassin Terraf and Youssef Iraqi, "CAT-Net: A Channel and Self-Attention TCN for Robust Frame-Level Overlapping Speech Detection."
+          <div class="pub-venue">IEEE Transactions on Audio, Speech and Language Processing · 2026 · <a href="https://doi.org/10.1109/TASLPRO.2026.3661413" target="_blank">DOI</a></div>
+        </div>
+        <div class="pub-item">
+          Imane Akdim, Loubna Mekouar, and Youssef Iraqi, "Trust in Recommender Systems: A Survey."
+          <div class="pub-venue">Expert Systems with Applications · Vol. 298 · 2026 · <a href="https://doi.org/10.1016/j.eswa.2025.129653" target="_blank">DOI</a></div>
+        </div>
+        <div class="pub-item">
+          Abderrafi Abdeddine, Youssef Iraqi, and Loubna Mekouar, "An Efficient Task Allocation in Mobile Crowdsensing Environments."
+          <div class="pub-venue">IEEE Transactions on Network and Service Management · Vol. 22, No. 3 · 2025 · <a href="https://doi.org/10.1109/TNSM.2025.3540293" target="_blank">DOI</a></div>
+        </div>
+        <div class="pub-item">
+          Ashfaq Ahmed, Arafat Al-Dweik, Youssef Iraqi, Hamad Yahya, and Ernesto Damiani, "Hybrid Automatic Repeat Request (HARQ) in Wireless Communications Systems and Standards: A Contemporary Survey."
+          <div class="pub-venue">IEEE Communications Surveys &amp; Tutorials · Vol. 23, No. 4 · 2021 · <a href="https://doi.org/10.1109/COMST.2021.3094401" target="_blank">DOI</a></div>
+        </div>
+        <div class="pub-item">
+          Ammar Battah, Youssef Iraqi, and Ernesto Damiani, "A Trust and Reputation System for IoT Service Interactions."
+          <div class="pub-venue">IEEE Transactions on Network and Service Management · Vol. 19, No. 3 · 2022 · <a href="https://doi.org/10.1109/TNSM.2022.3179875" target="_blank">DOI</a></div>
+        </div>
+        <div class="pub-item">
+          Reaz Ahmed, Noura Limam, Jin Xiao, Youssef Iraqi, and Raouf Boutaba, "Resource and Service Discovery in Large-Scale Multi-Domain Networks."
+          <div class="pub-venue">IEEE Communications Surveys &amp; Tutorials · Vol. 9, No. 4 · 2007 · <em>Winner of the 2008 IEEE Fred W. Ellersick Prize Paper Award</em></div>
+        </div>
+      </div>
+      <p style="font-size:0.82rem; color:var(--text-muted); margin-top:1.2rem;">
+        Full publication list on <a href="https://scholar.google.com/citations?user=0LdsuWgAAAAJ&hl=en" target="_blank">Google Scholar</a>.
+        Code and datasets for recent papers at the <a href="https://github.com/MANARA-Lab-UM6P" target="_blank">MANARA Lab GitHub organization</a>.
+      </p>
+    </section>
+
     <!-- PATENTS -->
     <section class="section">
       <h2 class="section-title">US Patents</h2>
@@ -97,19 +138,9 @@
       </div>
     </section>
 
-    <!-- PUBLICATIONS -->
-    <section class="section">
-      <h2 class="section-title">Publications</h2>
-      <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.7;">
-        A full list of publications is available on
-        <a href="https://scholar.google.com/citations?user=0LdsuWgAAAAJ&hl=en" target="_blank">Google Scholar</a>.
-        Publication-linked code and datasets from the UM6P era are maintained at the
-        <a href="https://github.com/MANARA-Lab-UM6P" target="_blank">MANARA Lab GitHub organization</a>.
-      </p>
-    </section>
-
     <footer>
-      &copy; 2026 Youssef Iraqi · College of Computing, UM6P · Benguerir, Morocco
+      &copy; <span id="year"></span> Youssef Iraqi · College of Computing, UM6P · Benguerir, Morocco
+      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>
   </main>
 

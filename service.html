@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Service — Youssef Iraqi</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,6 +18,11 @@
     </div>
 
     <img src="photo.jpg" alt="Youssef Iraqi" class="sidebar-photo" />
+
+    <button class="nav-toggle" onclick="
+      document.querySelector('nav').classList.toggle('open');
+      document.querySelector('.sidebar-links').classList.toggle('open');
+    ">☰ Menu</button>
 
     <nav>
       <a href="index.html">Home</a>
@@ -41,7 +47,7 @@
   <main>
     <header class="page-header">
       <h1 class="page-title">Service</h1>
-      <p class="page-subtitle">Editorial, conference organizing, and technical program committees</p>
+      <p class="page-subtitle">Editorial, keynotes, conference organizing, and technical program committees</p>
     </header>
 
     <!-- EDITORIAL -->
@@ -54,6 +60,18 @@
         <li>Associate Editor, <em>Annals of Telecommunications</em>, Springer, January 2024 – present.</li>
         <li>Guest Editor, <em>Vehicular Communications</em>, Special Issue on Computational Aspects of Vehicular Networks, 2024.</li>
         <li>Editorial Board Member, <em>International Journal of E-Health and Medical Communications (IJEHMC)</em>, 2014 – 2020.</li>
+      </ul>
+    </section>
+
+    <!-- KEYNOTES -->
+    <section class="section">
+      <h2 class="section-title">Keynotes &amp; Invited Talks</h2>
+      <ul class="service-list">
+        <li>"Trustworthy and Intelligent IoT Systems: Challenges and Emerging Directions." Keynote, 8th International Conference on Applied Informatics, Benguerir, Morocco, October 2025.</li>
+        <li>"Towards Reliable and Intelligent IoT: Trust Management and Beyond." Keynote, MoDIoT — 1st International Workshop on Model-Based Development for the IoT, part of ACM/IEEE MODELS, Michigan, USA, October 2025.</li>
+        <li>"Empowering Women's Climate Resilience: Technology and Cross-Border Research." Webinar, Environment Platform Wales — Insights Wales, December 2025.</li>
+        <li>"Blockchain-Based Reputation Systems." Speech, Future IT Leaders for a Multicultural Digital Europe, June 2021.</li>
+        <li>Panel: Roots and Route, Human-Centered Innovation Across Africa and The Mediterranean, UM6P, Rabat, October–November 2025.</li>
       </ul>
     </section>
 
@@ -91,22 +109,23 @@
         <li>IEEE Consumer Communications and Networking Conference (CCNC), 2005–2013.</li>
         <li>IEEE Global Information Infrastructure and Networking Symposium (GIIS), 2012–2020, 2022.</li>
         <li>IEEE International Conference on Cyber Security and Resilience (CSR), 2022.</li>
+        <li>IEEE Services Workshop on Cyber Security and Resilience in the Internet of Things, 2020.</li>
         <li>IEEE International Symposium on Security and Privacy in IoT (SPIoT), 2014–2021.</li>
         <li>IEEE Canadian Conference on Electrical and Computer Engineering (CCECE), 2016–2020.</li>
         <li>IEEE International Conference on Artificial Intelligence in Information and Communication (ICAIIC), 2020.</li>
         <li>IFIP Wireless and Mobile Networking Conference (WMNC), 2009–2014.</li>
+        <li>IFIP/IEEE International Conference on Mobile and Wireless Communications Networks (MWCN), 2005, 2007–2008.</li>
         <li>IFIP International Conference on Networking (NETWORKING), 2005–2006.</li>
         <li>The International Conference on Networked Systems (NETYS), 2023.</li>
         <li>The International Wireless Communications &amp; Mobile Computing Conference (IWCMC), 2023.</li>
         <li>International Conference on Big Data and Smart Computing (BigComp), 2016–2017.</li>
-        <li>IEEE Services Workshop on Cyber Security and Resilience in the Internet of Things, 2020.</li>
-        <li>IFIP/IEEE International Conference on Mobile and Wireless Communications Networks (MWCN), 2005, 2007–2008.</li>
         <li>International Conference on Islamic Applications in Computer Science and Technologies, 2015, 2022, 2023.</li>
       </ul>
     </section>
 
     <footer>
-      &copy; 2026 Youssef Iraqi · College of Computing, UM6P · Benguerir, Morocco
+      &copy; <span id="year"></span> Youssef Iraqi · College of Computing, UM6P · Benguerir, Morocco
+      <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>
   </main>
 

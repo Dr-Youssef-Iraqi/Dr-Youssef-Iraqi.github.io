@@ -203,6 +203,40 @@ main {
   border-bottom: 1px solid var(--border-light);
 }
 
+/* ── NEWS ── */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0.8rem;
+  align-items: baseline;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.news-text {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
 /* ── BIO ── */
 .bio-text {
   font-family: var(--serif);
@@ -233,6 +267,33 @@ main {
   border-radius: 2px;
   letter-spacing: 0.04em;
   border: 1px solid rgba(26,58,92,0.12);
+}
+
+/* ── STUDENTS ── */
+.student-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.student-item {
+  padding: 0.8rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 3px;
+}
+
+.student-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+
+.student-topic {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
 /* ── CONTACT INFO ── */
@@ -297,6 +358,41 @@ main {
   font-size: 0.82rem;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+/* ── SELECTED PUBLICATIONS ── */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.pub-item {
+  padding: 0.9rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: 3px;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.pub-item a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.pub-item a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.pub-venue {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-light);
+  margin-top: 0.3rem;
+  letter-spacing: 0.03em;
 }
 
 /* ── PUBLICATION / PATENT ITEMS ── */
@@ -521,5 +617,67 @@ footer {
 
   main {
     padding: 2rem 1.5rem;
+  }
+
+  .student-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-item {
+    grid-template-columns: 70px 1fr;
+  }
+}
+
+/* ── MOBILE NAV TOGGLE ── */
+.nav-toggle {
+  display: none;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: var(--mono);
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .sidebar-photo,
+  .sidebar-photo-placeholder {
+    width: 70px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .sidebar-links {
+    display: none;
+  }
+
+  .sidebar-links.open {
+    display: flex;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
   }
 }
