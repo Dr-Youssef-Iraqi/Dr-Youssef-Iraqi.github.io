@@ -81,6 +81,7 @@ body {
   aspect-ratio: 1;
   border-radius: 4px;
   object-fit: cover;
+  object-position: center 15%;
   opacity: 0.92;
   border: 2px solid rgba(255,255,255,0.15);
 }
