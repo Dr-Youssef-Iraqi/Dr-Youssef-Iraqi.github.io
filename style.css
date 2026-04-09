@@ -299,6 +299,21 @@ main {
   font-weight: 400;
 }
 
+.student-list-label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  margin-bottom: 0.4rem;
+}
+
+.cosup {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
 /* ── CONTACT INFO ── */
 .contact-grid {
   display: grid;
