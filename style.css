@@ -215,7 +215,7 @@ main {
   grid-template-columns: 80px 1fr;
   gap: 0.8rem;
   align-items: baseline;
-  padding: 0.7rem 0.8rem;
+  padding: 0.4rem 0.8rem;
   border-bottom: 1px solid var(--border-light);
   border-left: 2px solid var(--accent-light);
 }
@@ -235,7 +235,7 @@ main {
 .news-text {
   font-size: 0.88rem;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ── BIO ── */
