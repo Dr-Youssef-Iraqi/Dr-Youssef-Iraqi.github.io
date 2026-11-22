@@ -563,6 +563,8 @@ footer {
   color: var(--accent);
   line-height: 1.9;
 }
+.pub-id a.pdf-link { color: var(--accent-warm); text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
+.pub-id a.pdf-link:hover { text-decoration-style: solid; }
 .pub-list u { text-decoration-color: var(--text-light); text-underline-offset: 2px; }
 .note-offline { color: var(--text-light); font-style: italic; font-size: 0.8rem; }
 
