@@ -407,7 +407,7 @@ main {
 }
 
 .course-list li::before {
-  content: '—';
+  content: '–';
   position: absolute;
   left: 0;
   color: var(--text-light);
@@ -431,7 +431,7 @@ main {
 }
 
 .service-list li::before {
-  content: '—';
+  content: '–';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -470,7 +470,7 @@ main {
 }
 
 .editorial-list li::before {
-  content: '—';
+  content: '–';
   position: absolute;
   left: 0;
   color: var(--accent-warm);
@@ -551,3 +551,19 @@ footer {
     padding: 1.5rem 1rem;
   }
 }
+
+/* ── PUBLICATIONS ── */
+.pub-list li { padding-left: 3.6rem; }
+.pub-list li::before { content: none; }
+.pub-id {
+  position: absolute;
+  left: 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  line-height: 1.9;
+}
+.pub-list u { text-decoration-color: var(--text-light); text-underline-offset: 2px; }
+.note-offline { color: var(--text-light); font-style: italic; font-size: 0.8rem; }
+
+.service-list strong, .editorial-list strong { font-weight: 600; }
